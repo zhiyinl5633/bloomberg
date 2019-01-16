@@ -335,6 +335,26 @@ a:focus, a:hover {
   pointer-events: none;
 }
 
+/* Google Form */
+.form{
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+  padding-right: 10rem;
+  background: linear-gradient( rgba(0, 0, 0,0.15), rgba(0, 0, 0,0.15)), url('../img/form2.png') no-repeat center fixed;
+    background-size: cover;
+}
+
+/*@media (max-width: 992px) {*/
+/*  .form {*/
+/*    height: 75%;*/
+/*  }*/
+/*}*/
+
+/*.form iframe {*/
+/*  pointer-events: none;*/
+/*}*/
+
+
 footer {
   padding: 5rem 0;
 }
