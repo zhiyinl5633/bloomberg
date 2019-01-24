@@ -57,7 +57,7 @@
             <a class="nav-link js-scroll-trigger" href="#quiz">Quiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#feedbacks">Feedbacks</a>
+            <a class="nav-link js-scroll-trigger" href="#feedback">Feedback</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -84,9 +84,9 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">About</h2>
-          <p class="text-white mb-4">Congratulations on receiving your Software Engineer Interview with Bloomberg!
-            <br><br> Here at Bloomberg, engineers have a passion for writing reusable, adequate solutions to complex problems. We keep an open mind and adapt to an ever changing market landscape. Our teams develop software that impacts thousands of users
-            globally.
+          <p class="text-white mb-4">Congratulations on reaching the last step of your interview process with Bloomberg!
+            <br><br> Here at Bloomberg, engineers have a passion for writing reusable, adequate solutions to solve complex problems. We keep an open mind and adapt to an ever changing market landscape. Our teams develop software that impacts thousands
+            of users globally.
             <br><br> Take some time today to learn fun facts about Bloomberg and get an idea of how our software engineers define their experiences here. Test your knowledge with our interactive quiz and make sure to provide feedback as Bloomberg is always
             looking to improve!
           </p>
@@ -246,7 +246,7 @@
     <script>
       Survey.Survey.cssType = "bootstrap";
 
-      var surveyJSON = { title: "Test Your Knowledge", completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>", pages: [{ name: "page1", elements: [{ type: "html", name: "question1", html: "You are about to test your knowledge on Bloomberg! <br/>Please click on <b>'Start Quiz'</b> button when you are ready." }], title: "Test Your Knowledge", questionsOrder: "random" }, { name: "page2", elements: [{ type: "radiogroup", name: "When Founded", title: "When was Bloomberg founded?", correctAnswer: "1981", isRequired: true, choices: ["1990", "1981", "1975", "1970"] }] }, { name: "page3", elements: [{ type: "radiogroup", name: "founders", title: "Who founded Bloomberg?", correctAnswer: "All of the above", isRequired: true, choices: ["Michael Bloomberg", "Thomas Secunda", "Duncan MacMillian", "Charles Zegar", "All of the above"], choicesOrder: "desc" }] }, { name: "page4", elements: [{ type: "radiogroup", name: "employees", title: "About how many employees work at Bloomberg?", correctAnswer: "19,000", isRequired: true, choices: ["15,000", "19,000", "10,000", "12,000"], choicesOrder: "random" }], maxTimeToFinish: 15 }, { name: "page5", elements: [{ type: "radiogroup", name: "Where did Michael Bloomberg start his career before founding Bloomberg LP?", correctAnswer: "Salomon Brothers", isRequired: true, choices: ["Salomon Brothers", "Waddell & Reed", "Charles Schwab", "J.P. Morgan"], choicesOrder: "random" }] }, { name: "page6", elements: [{ type: "radiogroup", name: "Why do our elevators stop on some floors?", correctAnswer: "For employees to network", isRequired: true, choices: ["For employees to network", "Employees get exercise", "To make it inconvenient to get to your desk "], choicesOrder: "random" }] }, { name: "page7", elements: [{ type: "radiogroup", name: "question2", title: "How many fishtanks are the at Bloomberg L.P.?", correctAnswer: "item2", isRequired: true, choices: [{ value: "item1", text: "15" }, { value: "item2", text: "22" }, { value: "item3", text: "40" }], choicesOrder: "random" }] }], showProgressBar: "bottom", startSurveyText: "Start Quiz", firstPageIsStarted: true, maxTimeToFinish: 1000, maxTimeToFinishPage: 100 }
+      var surveyJSON = { title: "Test Your Knowledge", completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>", pages: [{ name: "page1", elements: [{ type: "html", name: "question1", html: "Please click on <b>'Start Quiz'</b> button when you are ready." }], title: "How well do you know Bloomberg?", questionsOrder: "random" }, { name: "page2", elements: [{ type: "radiogroup", name: "When Founded", title: "When was Bloomberg founded?", correctAnswer: "1981", isRequired: true, choices: ["1990", "1981", "1975", "1970"] }] }, { name: "page3", elements: [{ type: "radiogroup", name: "founders", title: "Who founded Bloomberg?", correctAnswer: "All of the above", isRequired: true, choices: ["Michael Bloomberg", "Thomas Secunda", "Duncan MacMillian", "Charles Zegar", "All of the above"], choicesOrder: "desc" }] }, { name: "page4", elements: [{ type: "radiogroup", name: "employees", title: "About how many employees work at Bloomberg?", correctAnswer: "19,000", isRequired: true, choices: ["15,000", "19,000", "10,000", "12,000"], choicesOrder: "random" }], maxTimeToFinish: 15 }, { name: "page5", elements: [{ type: "radiogroup", name: "Where did Michael Bloomberg start his career before founding Bloomberg LP?", correctAnswer: "Salomon Brothers", isRequired: true, choices: ["Salomon Brothers", "Waddell & Reed", "Charles Schwab", "J.P. Morgan"], choicesOrder: "random" }] }, { name: "page6", elements: [{ type: "radiogroup", name: "Why do our elevators stop on some floors?", title: "Why do our elevators only stop certain floors?", correctAnswer: "For employees to network", isRequired: true, choices: ["For employees to network", { value: "Employees get exercise", text: "Employees to get some exercise" }, "To make it inconvenient to get to your desk "], choicesOrder: "random" }] }, { name: "page7", elements: [{ type: "radiogroup", name: "question2", title: "How many Koi fish are there on the 6th floor of the NYC headquarters?", correctAnswer: "item2", isRequired: true, choices: [{ value: "item1", text: "15" }, { value: "item2", text: "22" }, { value: "item3", text: "40" }], choicesOrder: "random" }] }], showProgressBar: "bottom", startSurveyText: "Start Quiz", firstPageIsStarted: true, maxTimeToFinish: 1000, maxTimeToFinishPage: 100 }
 
       function sendDataToServer(survey) {
         //send Ajax request to your web server.
@@ -259,86 +259,10 @@
         onComplete: sendDataToServer
       });
     </script>
-
-    <!--<div id="surveyElement"></div>-->
-    <!--<div id="surveyResult"></div>-->
-
-    <!--<script>-->
-    <!--  Survey-->
-    <!--    .StylesManager-->
-    <!--    .applyTheme("bootstrap");-->
-    <!--  Survey.defaultBootstrapCss.navigationButton = "btn btn-green";-->
-
-    <!--  var json = {-->
-    <!--    title: "American History",-->
-    <!--    showProgressBar: "bottom",-->
-    <!--    showTimerPanel: "top",-->
-    <!--    maxTimeToFinishPage: 10,-->
-    <!--    maxTimeToFinish: 25,-->
-    <!--    firstPageIsStarted: true,-->
-    <!--    startSurveyText: "Start Quiz",-->
-    <!--    pages: [{-->
-    <!--      questions: [{-->
-    <!--        type: "html",-->
-    <!--        html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."-->
-    <!--      }]-->
-    <!--    }, {-->
-    <!--      questions: [{-->
-    <!--        type: "radiogroup",-->
-    <!--        name: "civilwar",-->
-    <!--        title: "When was the Civil War?",-->
-    <!--        choices: [-->
-    <!--          "1750-1800", "1800-1850", "1850-1900", "1900-1950", "after 1950"-->
-    <!--        ],-->
-    <!--        correctAnswer: "1850-1900"-->
-    <!--      }]-->
-    <!--    }, {-->
-    <!--      questions: [{-->
-    <!--        type: "radiogroup",-->
-    <!--        name: "libertyordeath",-->
-    <!--        title: "Who said 'Give me liberty or give me death?'",-->
-    <!--        choicesOrder: "random",-->
-    <!--        choices: [-->
-    <!--          "John Hancock", "James Madison", "Patrick Henry", "Samuel Adams"-->
-    <!--        ],-->
-    <!--        correctAnswer: "Patrick Henry"-->
-    <!--      }]-->
-    <!--    }, {-->
-    <!--      maxTimeToFinish: 15,-->
-    <!--      questions: [{-->
-    <!--        type: "radiogroup",-->
-    <!--        name: "magnacarta",-->
-    <!--        title: "What is the Magna Carta?",-->
-    <!--        choicesOrder: "random",-->
-    <!--        choices: [-->
-    <!--          "The foundation of the British parliamentary system", "The Great Seal of the monarchs of England", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower"-->
-    <!--        ],-->
-    <!--        correctAnswer: "The foundation of the British parliamentary system"-->
-    <!--      }]-->
-    <!--    }],-->
-    <!--    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"-->
-    <!--  };-->
-
-    <!--  window.survey = new Survey.Model(json);-->
-
-    <!--  survey-->
-    <!--    .onComplete-->
-    <!--    .add(function(result) {-->
-    <!--      document-->
-    <!--        .querySelector('#surveyResult')-->
-    <!--        .innerHTML = "result: " + JSON.stringify(result.data);-->
-    <!--    });-->
-
-    <!--  $("#surveyElement").Survey({ model: survey });-->
-    <!--</script>-->
-
-
-    <!--<a data-quiz="QQTD9EW" data-type=5 href="https://www.quiz-maker.com/QQTD9EW" style="display:inline-block; text-align:left; margin:0 auto; width:100%; max-width:824px; box-sizing:border-box; text-decoration:none; padding:1em; border:1px solid #CCC; color:inherit;"><div style="font-family:sans-serif; font-size:1.5em; line-height:40px; color:inherit;">Test Your Knowledge</div></a><script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//cdn.poll-maker.com/quiz-embed-v1.js','qp');</script>-->
-
   </section>
 
   <!--Google Form-->
-  <section id="feedbacks" class="form ">
+  <section id="feedback" class="form ">
     <div class="container col-lg-5">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAhEI4A3xDN4zlPcZQVjlx2FaVGhyCoC8LHw5M1EcicYD2Sg/viewform?embedded=true" width="100%" height="1154" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
@@ -356,7 +280,7 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Address</h4>
+              <h4 class="text-uppercase m-0">Headquarters</h4>
               <hr class="my-4">
               <div class="small text-black-50">731 Lexington Ave, New York, NY 10022</div>
             </div>
@@ -367,10 +291,10 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-envelope text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Email</h4>
+              <h4 class="text-uppercase m-0">Further Questions?</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <div class="small text-black-50">Please reach out to your recruiting coordinator</div>
+                <div class=" text-black-50">Please reach out to your recruiting coordinator</div>
               </div>
             </div>
           </div>
@@ -380,7 +304,7 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Phone</h4>
+              <h4 class="text-uppercase m-0">Customer Support</h4>
               <hr class="my-4">
               <div class="small text-black-50">+1 (212) 318-2000</div>
             </div>
